@@ -33,6 +33,10 @@
 html {
   font-size: 62.5%; /*62.5% of default font size added by the browsers => 62.5% x 16px = 10px*/
 }
+
+body {
+  font-family: Roboto, Arial, Helvetica, sans-serif;
+}
 /*-------------------- END  - TYPOGRAPHY --------------------*/
 
 /*-------------------- START - ICONS --------------------*/
@@ -44,6 +48,10 @@ html {
 
 .icon--primary {
   fill: var(--color-primary);
+}
+
+.icon--white {
+  fill: var(--color-white);
 }
 
 /* The icon container adds a background to the icons & it will be used wherever needed, otherwise the icon itself will be used 
@@ -75,7 +83,44 @@ a {
 /*-------------------- END - LISTS --------------------*/
 
 /*-------------------- START - COLLAPSIBLE --------------------*/
-.collapsible {
+/* Header element containts a header & icon*/
+.collapsible__header {
+  display: flex;
+  justify-content: space-between;
+}
+
+/* It removes the margin top of the header item (e.g. h2) */
+.collapsible__heading {
+  margin-top: 0;
+  font-size: 3rem;
+}
+
+/* It controls the pointer of the chevron (e.g facedown - expanded or face right (hidden content) */
+.collapsible__chevron {
+  transform: rotate(-90deg);
+  transition: transform 0.3s;
+}
+
+/* In the event of collapsible, the content is invisible 
+Used max-height to have an overflow & be able to add transition effect
+Overflow to hide the content when the content is not expanded
+*/
+.collapsible__content {
+  max-height: 0;
+  opacity: 0;
+  overflow: hidden;
+  transition: all 0.3s;
+}
+
+/* If an element has the 'collapsible--expanded' class, the chevron has to point down (rotate) */
+.collapsible--expanded .collapsible__chevron {
+  transform: rotate(0);
+}
+
+/* If an element has the 'collapsible--expanded' class, the content should be visbile as block*/
+.collapsible--expanded .collapsible__content {
+  max-height: 100vh;
+  opacity: 1;
 }
 /*-------------------- END - COLLAPSIBLE --------------------*/
 
