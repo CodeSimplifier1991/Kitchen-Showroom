@@ -38,6 +38,51 @@ html {
 
 body {
   font-family: Roboto, Arial, Helvetica, sans-serif;
+  font-size: 2.4rem; /*Targets all elements but headings*/
+  line-height: 1.5; /*Adds line height to all elements 1.5x of 10px*/
+  color: var(--color-body);
+}
+
+h1,
+h2,
+h3 {
+  color: var(--color-heading);
+  margin-bottom: 1rem; /*Creates a bottom margin with all elements coming after it*/
+}
+
+h1 {
+  font-size: 7rem;
+}
+
+h2 {
+  font-size: 4rem;
+}
+
+h3 {
+  font-size: 3rem;
+}
+
+p {
+  margin-top: 0;
+}
+
+/* Controls the font size for wider screens */
+@media screen and (min-width: 768px) {
+  body {
+    font-size: 1.8rem;
+  }
+
+  h1 {
+    font-size: 8rem;
+  }
+
+  h2 {
+    font-size: 4rem;
+  }
+
+  h3 {
+    font-size: 2.4rem;
+  }
 }
 /*-------------------- END  - TYPOGRAPHY --------------------*/
 
