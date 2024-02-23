@@ -19,10 +19,12 @@
     <!-- END - FONTS -->
   </head>
   <body>
-    <!-- START - Navigation bar -->
+    <!-- START - Navigation bar
+    Added the 'collapsible' class to control the nav-bar in mobile views
+    -->
     <nav class="nav collapsible">
       <!-- Business Logo clickable-->
-      <a href="/">
+      <a href="#">
         <span class="icon-container">
           <svg class="icon icon--primary">
             <use xlink:href="images/sprite.svg#business_logo"></use>
@@ -31,17 +33,15 @@
       </a>
 
       <!-- Toggler icon -->
-      <span class="icon-container">
-        <svg class="icon icon--primary">
-          <use xlink:href="images/sprite.svg#menu"></use>
-        </svg>
-      </span>
+      <svg class="icon icon--primary">
+        <use xlink:href="images/sprite.svg#menu"></use>
+      </svg>
 
       <!-- Menu list -->
-      <ul class="list nav__list">
+      <ul class="list nav__list collapsible__content">
         <li class="nav__item"><a href="#">Home</a></li>
         <li class="nav__item"><a href="#">About</a></li>
-        <li class="nav__item"><a href="#">Porfolio</a></li>
+        <li class="nav__item"><a href="#">Portfolio</a></li>
         <li class="nav__item"><a href="#">Contact us</a></li>
       </ul>
     </nav>

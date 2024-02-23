@@ -131,17 +131,21 @@ Overflow to hide the content when the content is not expanded
   flex-direction: row;
   justify-content: space-between; /*In mobile version, the nav items are set horizentally & space between them*/
   flex-wrap: wrap;
-  padding: 1rem;
+  padding: 0 1rem;
+  align-items: center;
 }
 
 /*Initially the menu icon has the following effects*/
 .nav__toggler {
   opacity: 0.5;
+  transition: box-shadow 0.15s;
+  cursor: pointer;
 }
 
 /*Targeting all the lists in the navigation bars*/
 .nav__list {
   width: 100%; /*By giving the max width to the item, we push it to the next line & that helps with the views in mobile views*/
+  margin: 0;
 }
 
 /*Targeting list items in the navigation bar*/
@@ -161,5 +165,37 @@ Overflow to hide the content when the content is not expanded
 /*Adds hover effect on nav items*/
 .nav__item > a:hover {
   color: var(--color-grey-0);
+}
+
+/* It makes the menu icon bright in the event of nav bar expanded */
+.nav.collapsible--expanded .nav__toggler {
+  opacity: 1;
+  box-shadow: 0 0 0 3px var(--color-grey-1);
+  border-radius: 5px;
+}
+
+/* Media query to hide the menu icon in wider screens & inline the nav items */
+@media screen and (min-width: 768px) {
+  /* Hide the nav toggler (menu icon) */
+  .nav__toggler {
+    display: none;
+  }
+
+  /* Streches the list to take all the available width */
+  .nav__list {
+    width: auto;
+    display: flex;
+    flex-direction: row;
+    font-size: 1.6rem;
+
+    /* Ensures the content (menu items) are visible in wide screens by default */
+    max-height: 100%;
+    opacity: 1;
+  }
+
+  /* Removes the bottom border of the list items in the mobile view */
+  .nav__item {
+    border: 0;
+  }
 }
 /*-------------------- END - NAV --------------------*/
