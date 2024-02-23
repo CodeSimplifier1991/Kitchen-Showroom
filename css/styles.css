@@ -9,11 +9,13 @@
 }
 
 :root {
-  --color-primary: #7a3aac;
-  --color-primary-hover: #b049ff;
-  --color-primary-dark: #56277a;
+  --color-primary: #2584ff;
+  --color-primary-hover: #1c5fb5;
+  --color-primary-dark: #123d74;
 
-  --color-secondary: #3f7ba6;
+  --color-secondary: #00d9ff;
+
+  --color-accent: #ff3400;
 
   --color-body: #918ca4;
   --color-heading: #1b0760;
