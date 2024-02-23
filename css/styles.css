@@ -1,0 +1,10 @@
+/*-------------------- START - GENERAL CODES --------------------*/
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style: none; /*Removes all the bullet points for lists*/
+}
+/*-------------------- END - GENERAL CODES --------------------*/
